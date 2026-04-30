@@ -99,8 +99,9 @@ export default function Page() {
   return (
     <>
       <nav className="nav">
-        <a href="/" className="nav__brand" aria-label="Oysterable">
-          <img src="/site/oysterable-logo.svg" alt="Oysterable" />
+        <a href="/" className="nav__brand" aria-label="오이스터에이블">
+          <img src="/site/oysterable-symbol.svg" alt="" />
+          <span>{lang === "ko" ? "오이스터에이블" : "Oysterable"}</span>
         </a>
         <div className="nav__links">
           <a href="#what">{t("nav.svc")}</a>

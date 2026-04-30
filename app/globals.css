@@ -28,9 +28,9 @@ body::before{
 
 /* nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 32px;background:rgba(0,0,0,0.6);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav__brand{display:inline-flex;align-items:center;text-decoration:none;color:var(--ink);transition:opacity .2s}
+.nav__brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);transition:opacity .2s;font-size:18px;font-weight:600;letter-spacing:-0.01em}
 .nav__brand:hover{opacity:0.85}
-.nav__brand img{height:24px;width:auto;display:block}
+.nav__brand img{height:26px;width:auto;display:block}
 .nav__links{display:flex;gap:28px;align-items:center;font-size:13px}
 .nav__links a{color:var(--ink);text-decoration:none;opacity:0.8;transition:opacity .2s;font-weight:400}
 .nav__links a:hover{opacity:1}
@@ -273,7 +273,8 @@ footer{padding:48px 32px 32px;border-top:1px solid rgba(255,255,255,0.08);max-wi
 @media (max-width:900px){
   section{padding:80px 24px}
   .nav{padding:12px 20px}
-  .nav__brand img{height:20px}
+  .nav__brand{font-size:15px;gap:8px}
+  .nav__brand img{height:22px}
   .nav__links a:not(.lang button){display:none}
   .hero{padding:0;min-height:100vh}
   .hero__bg img{object-position:center 30%}
