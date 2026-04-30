@@ -99,9 +99,9 @@ export default function Page() {
   return (
     <>
       <nav className="nav">
-        <div className="nav__brand">
-          <span className="infinity"></span>Oysterable
-        </div>
+        <a href="/" className="nav__brand" aria-label="Oysterable">
+          <img src="/site/oysterable-logo.svg" alt="Oysterable" />
+        </a>
         <div className="nav__links">
           <a href="#what">{t("nav.svc")}</a>
           <a href="#tech">{t("nav.tech")}</a>
