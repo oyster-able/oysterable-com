@@ -366,34 +366,28 @@ export default function Page() {
 
         <div className="cases__grid">
           {[
-            { i: 1, cyc: "REUSE", ico: "🏛", recycle: false, img: "/site/case-1.jpg" },
-            { i: 2, cyc: "REUSE", ico: "🏛", recycle: false, img: "/site/case-2.jpg" },
-            { i: 3, cyc: "RECYCLE", ico: "🛒", recycle: true, img: "/site/case-3.jpg" },
-            { i: 4, cyc: "RECYCLE", ico: "🏪", recycle: true, img: "/site/case-4.jpg" },
-            { i: 5, cyc: "RECYCLE", ico: "🌆", recycle: true, img: "/site/case-5.jpg" },
-            { i: 6, cyc: "REUSE", ico: "☕", recycle: false, img: null as string | null },
-          ].map(({ i, ico, recycle, img }) => (
+            { i: 1, cyc: "REUSE", ico: "🏛", recycle: false },
+            { i: 2, cyc: "REUSE", ico: "🏛", recycle: false },
+            { i: 3, cyc: "RECYCLE", ico: "🛒", recycle: true },
+            { i: 4, cyc: "RECYCLE", ico: "🏪", recycle: true },
+            { i: 5, cyc: "RECYCLE", ico: "🌆", recycle: true },
+            { i: 6, cyc: "REUSE", ico: "☕", recycle: false },
+          ].map(({ i, ico, recycle }) => (
             <div
               key={i}
               className={`case-card reveal${recycle ? " cyc-recycle" : ""}`}
             >
-              {img && (
-                <div className="case-card__visual">
-                  <img src={img} alt="" />
+              <div>
+                <div className="case-card__cycle">
+                  <span className="dot"></span>
+                  <span>{t(`case.c${i}.cyc`)}</span>
                 </div>
-              )}
-              <div className="case-card__body">
-                <div>
-                  <div className="case-card__cycle">
-                    <span className="dot"></span>
-                    <span>{t(`case.c${i}.cyc`)}</span>
-                  </div>
-                  <div className="case-card__name">
-                    <span className="ico">{ico}</span>
-                    <span>{t(`case.c${i}.n`)}</span>
-                  </div>
-                  <p className="case-card__desc">{t(`case.c${i}.d`)}</p>
+                <div className="case-card__name">
+                  <span className="ico">{ico}</span>
+                  <span>{t(`case.c${i}.n`)}</span>
                 </div>
+                <p className="case-card__desc">{t(`case.c${i}.d`)}</p>
+              </div>
               <div className="case-card__metrics">
                 {i === 1 && (
                   <div className="case-card__metric">
@@ -459,7 +453,6 @@ export default function Page() {
                   </div>
                 )}
               </div>
-              </div>
             </div>
           ))}
         </div>
@@ -478,16 +471,11 @@ export default function Page() {
 
       <section className="fb-strip">
         <div className="fb-strip__inner">
-          <div className="fb-strip__item">
-            <img src="/site/child-bin.png" alt="" />
-          </div>
-          <div className="fb-strip__item">
-            <img src="/site/sorting-system.png" alt="" />
-          </div>
-          <div className="fb-strip__item placeholder">현장 영상</div>
-          <div className="fb-strip__item">
-            <img src="/site/lalaloop-emart24.jpg" alt="" />
-          </div>
+          <div className="fb-strip__item"><img src="/site/fb-1.jpg" alt="" /></div>
+          <div className="fb-strip__item"><img src="/site/fb-2.jpg" alt="" /></div>
+          <div className="fb-strip__item"><img src="/site/fb-3.jpg" alt="" /></div>
+          <div className="fb-strip__item"><img src="/site/fb-4.jpg" alt="" /></div>
+          <div className="fb-strip__item"><img src="/site/fb-5.jpg" alt="" /></div>
         </div>
       </section>
 
