@@ -178,12 +178,6 @@ export default function Page() {
         <div className="gallery-strip__inner">
           <div className="gallery-strip__head">
             <div className="gallery-strip__title">{t("gal.t")}</div>
-            <div
-              className="gallery-strip__title"
-              style={{ color: "var(--gray-2)" }}
-            >
-              {t("gal.s")}
-            </div>
           </div>
           <div className="gallery-strip__row">
             <div className="gallery-strip__item">
