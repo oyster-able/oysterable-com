@@ -180,24 +180,12 @@ export default function Page() {
             <div className="gallery-strip__title">{t("gal.t")}</div>
           </div>
           <div className="gallery-strip__row">
-            <div className="gallery-strip__item">
-              <img src="/site/child-bin.png" alt="" />
-            </div>
-            <div className="gallery-strip__item">
-              <img src="/site/lalaloop-emart24.jpg" alt="" />
-            </div>
-            <div className="gallery-strip__item">
-              <img src="/site/rc-light.png" alt="" />
-            </div>
-            <div className="gallery-strip__item">
-              <img src="/site/sorting-system.png" alt="" />
-            </div>
-            <div className="gallery-strip__item gallery-strip__item--placeholder">
-              현장 사진<br />placeholder
-            </div>
-            <div className="gallery-strip__item gallery-strip__item--placeholder">
-              제품 영상<br />placeholder
-            </div>
+            <div className="gallery-strip__item"><img src="/site/gallery-1.jpg" alt="" /></div>
+            <div className="gallery-strip__item"><img src="/site/gallery-2.jpg" alt="" /></div>
+            <div className="gallery-strip__item"><img src="/site/gallery-3.jpg" alt="" /></div>
+            <div className="gallery-strip__item"><img src="/site/gallery-4.jpg" alt="" /></div>
+            <div className="gallery-strip__item"><img src="/site/gallery-5.jpg" alt="" /></div>
+            <div className="gallery-strip__item"><img src="/site/gallery-6.jpg" alt="" /></div>
           </div>
         </div>
       </section>
@@ -248,10 +236,14 @@ export default function Page() {
             </div>
             <div className="svc__visuals">
               <div className="svc__visual-main">
-                <img src="/site/lalaloop-emart24.jpg" alt="" />
+                <img src="/site/reuse-main.jpg" alt="라라루프 다회용컵 반납기" />
               </div>
-              <div className="svc__visual-sm placeholder">매장 운영 사진</div>
-              <div className="svc__visual-sm placeholder">반납 데모 영상</div>
+              <div className="svc__visual-sm">
+                <img src="/site/reuse-1.jpg" alt="다회용컵 운영" />
+              </div>
+              <div className="svc__visual-sm">
+                <img src="/site/reuse-2.jpg" alt="다회용컵 회로" />
+              </div>
             </div>
           </div>
 
@@ -275,12 +267,14 @@ export default function Page() {
             </div>
             <div className="svc__visuals">
               <div className="svc__visual-main">
-                <img src="/site/rc-light.png" alt="" />
+                <img src="/site/recycle-main.jpg" alt="AI 자동선별로봇" />
               </div>
               <div className="svc__visual-sm">
-                <img src="/site/sorting-system.png" alt="" />
+                <img src="/site/recycle-1.jpg" alt="오늘의 분리수거 앱" />
               </div>
-              <div className="svc__visual-sm placeholder">AI 인식 데모</div>
+              <div className="svc__visual-sm">
+                <img src="/site/recycle-2.jpg" alt="AI 비전 자원 인식" />
+              </div>
             </div>
           </div>
         </div>
