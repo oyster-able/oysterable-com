@@ -169,7 +169,12 @@ section{padding:140px 32px;max-width:1280px;margin:0 auto;position:relative;z-in
 
 /* success cases */
 .cases__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-.case-card{background:var(--gray-3);border-radius:24px;padding:36px 32px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:all .3s;grid-column:span 2;position:relative;overflow:hidden}
+.case-card{background:var(--gray-3);border-radius:24px;padding:0;min-height:280px;display:flex;flex-direction:column;transition:all .3s;grid-column:span 2;position:relative;overflow:hidden}
+.case-card__visual{aspect-ratio:5/3;overflow:hidden;position:relative;background:#000}
+.case-card__visual img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.case-card:hover .case-card__visual img{transform:scale(1.04)}
+.case-card__visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(29,29,31,0.85) 100%);pointer-events:none}
+.case-card__body{padding:28px 32px;display:flex;flex-direction:column;justify-content:space-between;flex:1}
 .case-card:nth-child(1),.case-card:nth-child(2){grid-column:span 3}
 .case-card:hover{background:#252527;transform:translateY(-4px)}
 .case-card__cycle{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--acc-cycle-reuse);font-weight:500;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:20px}
@@ -322,7 +327,8 @@ footer{padding:48px 32px 32px;border-top:1px solid rgba(255,255,255,0.08);max-wi
   .num-cell__big .unit{font-size:0.4em}
   .num-cell__label{font-size:12px;margin-top:12px;line-height:1.3}
   .cases__grid{grid-template-columns:1fr;gap:14px}
-  .case-card,.case-card:nth-child(1),.case-card:nth-child(2){grid-column:span 1;padding:28px 22px;min-height:auto}
+  .case-card,.case-card:nth-child(1),.case-card:nth-child(2){grid-column:span 1;padding:0;min-height:auto}
+  .case-card__body{padding:24px 22px}
   .case-card__name{font-size:20px;line-height:1.2}
   .case-card__name .ico{font-size:18px}
   .case-card__desc{font-size:13px;line-height:1.5}
