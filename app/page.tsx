@@ -129,7 +129,7 @@ export default function Page() {
 
       <section className="hero">
         <div className="hero__bg">
-          <img src="/site/hero-mom-child.jpg" alt="" />
+          <img src="/site/hero.jpg" alt="" />
         </div>
         <div className="hero__inner">
           <div className="hero__text">
