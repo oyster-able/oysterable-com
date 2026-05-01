@@ -24,7 +24,7 @@ export const i18n: Record<Lang, Record<string, string>> = {
     "svc.h1": "두 개의 순환고리,",
     "svc.h2": "무한대의 순환경제.",
     "svc.intro":
-      '도시의 자원은 두 가지 방식으로 다시 살아납니다. <strong>카페와 음식점에서 사용되는 일회용 컵</strong>을 다회용컵으로 대체해 <strong>재사용</strong>하고, 가정에서 분리배출되는 PET·캔·종이팩을 자원으로 <strong>재활용</strong>합니다. 두 흐름은 데이터로 더 멀리, 더 크게 확장됩니다.',
+      '도시의 자원은 두 가지 방식으로 다시 살아납니다. <strong>카페와 음식점에서 사용되는 일회용 컵</strong>을 다회용컵으로 대체해 <strong>재사용</strong>하고, <strong>가정에서 분리배출되는 PET·캔·종이팩</strong>을 자원으로 <strong>재활용</strong>합니다. 두 흐름은 데이터로 더 멀리, 더 크게 확장됩니다.',
     "svc.s1.tag": "REUSE · 재사용 회로",
     "svc.s1.name": "Lalaloop Reuse",
     "svc.s1.sub": "랄라루프 리유즈 · 다회용컵 풀스택",
@@ -230,7 +230,7 @@ export const i18n: Record<Lang, Record<string, string>> = {
     "svc.h1": "Two loops,",
     "svc.h2": "infinite circulation.",
     "svc.intro":
-      "A city's materials come back to life in two ways — <strong>reuse</strong>, replacing single-use cups in cafés and restaurants with returnables; and <strong>recycle</strong>, returning household PET, cans, and paper packs as raw materials. With data, both flows scale further.",
+      "A city's materials come back to life in two ways — <strong>reuse</strong>, replacing <strong>single-use cups in cafés and restaurants</strong> with returnables; and <strong>recycle</strong>, returning <strong>household PET, cans, and paper packs</strong> as raw materials. With data, both flows scale further.",
     "svc.s1.tag": "REUSE · the reuse loop",
     "svc.s1.name": "Lalaloop Reuse",
     "svc.s1.sub": "Returnable cups, full-stack",
