@@ -538,14 +538,6 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="sc-video reveal">
-          <div className="sc-video__placeholder">
-            <div className="sc-video__icon">▶</div>
-            <div className="sc-video__title">{t("sc.v.t")}</div>
-            <div className="sc-video__sub">{t("sc.v.s")}</div>
-          </div>
-        </div>
-
         <div className="sc-cities reveal">
           <div className="sc-cities__title">{t("sc.cities.t")}</div>
           <div className="sc-cities__grid sc-cities__grid--single">
