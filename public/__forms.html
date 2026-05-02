@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Netlify Forms detection</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="purpose">
+        <option value="meeting"></option>
+        <option value="b2g"></option>
+        <option value="b2b"></option>
+        <option value="press"></option>
+        <option value="invest"></option>
+        <option value="other"></option>
+      </select>
+      <input type="text" name="preferredDate" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="privacy" />
+    </form>
+  </body>
+</html>
