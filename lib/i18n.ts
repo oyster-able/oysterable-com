@@ -189,7 +189,7 @@ export const i18n: Record<Lang, Record<string, string>> = {
       "개인정보 수집·이용에 동의합니다 (이름·이메일·연락처는 문의 응대 목적으로만 사용되며, 1년간 보관 후 파기됩니다).",
     "cf.submit": "문의 보내기",
     "cf.success":
-      "✓ 메일 클라이언트가 열렸습니다. 전송 후 1영업일 내 답변드리겠습니다.",
+      "✓ 문의가 접수되었습니다. 1영업일 내 company@oysterable.com 에서 답변드리겠습니다.",
     "ft.ceo": "대표: 배태관",
     "ft.addr": "서울특별시 종로구 종로 6 5층 스타트업빌리지 (03187)",
     "ft.svc": "서비스",
@@ -399,7 +399,7 @@ export const i18n: Record<Lang, Record<string, string>> = {
       "I agree to the processing of my personal data (name, email, phone) for inquiry response only. Retained for 1 year, then deleted.",
     "cf.submit": "Send inquiry",
     "cf.success":
-      "✓ Your mail client should have opened. Send and we'll reply within 1 business day.",
+      "✓ Your inquiry has been received. We'll reply from company@oysterable.com within 1 business day.",
     "ft.ceo": "Bae Taegoan, CEO",
     "ft.addr":
       "Start-up Village 5F, 6 Jong-ro, Jongno-gu, Seoul, Republic of Korea (03187)",

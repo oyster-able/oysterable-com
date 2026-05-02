@@ -74,26 +74,37 @@ export default function Page() {
 
   const t = (k: string) => i18n[lang][k] ?? k;
 
-  function submitContact(e: React.FormEvent<HTMLFormElement>) {
+  const [submitting, setSubmitting] = useState(false);
+
+  async function submitContact(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (submitting) return;
     const f = e.currentTarget;
     const fd = new FormData(f);
-    const get = (k: string) => String(fd.get(k) || "");
-    const body =
-      `[Oysterable.com 문의]\n\n` +
-      `이름: ${get("name")}\n` +
-      `회사: ${get("company")}\n` +
-      `이메일: ${get("email")}\n` +
-      `연락처: ${get("phone") || "-"}\n` +
-      `문의 유형: ${get("purpose")}\n` +
-      `희망 일정: ${get("preferredDate") || "-"}\n\n` +
-      `--- 문의 내용 ---\n${get("message")}\n`;
-    const subject = `[문의/${get("purpose")}] ${get("company")} ${get("name")}`;
-    const mailto = `mailto:company@oysterable.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setShowSuccess(true);
+    const params = new URLSearchParams();
+    fd.forEach((v, k) => {
+      params.append(k, typeof v === "string" ? v : "");
+    });
+    setSubmitting(true);
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: params.toString(),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      f.reset();
+      setShowSuccess(true);
+    } catch (err) {
+      console.error(err);
+      alert(
+        lang === "ko"
+          ? "전송에 실패했습니다. 잠시 후 다시 시도하시거나 company@oysterable.com 으로 직접 보내주세요."
+          : "Submission failed. Please try again or email company@oysterable.com directly."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -571,8 +582,18 @@ export default function Page() {
         <form
           ref={formRef}
           className="contact-form reveal"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
           onSubmit={submitContact}
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don&apos;t fill this out: <input name="bot-field" />
+            </label>
+          </p>
           <div className="contact-form__title">{t("cf.t")}</div>
           <div className="contact-form__sub">{t("cf.s")}</div>
           <div className="contact-form__grid">
@@ -664,8 +685,13 @@ export default function Page() {
               <span>{t("cf.privacy")}</span>
             </label>
           </div>
-          <button type="submit" className="contact-form__submit">
-            {t("cf.submit")} <span className="arrow">→</span>
+          <button
+            type="submit"
+            className="contact-form__submit"
+            disabled={submitting}
+          >
+            {submitting ? (lang === "ko" ? "전송 중..." : "Sending...") : t("cf.submit")}{" "}
+            <span className="arrow">→</span>
           </button>
           <div
             className={`contact-form__success${showSuccess ? " show" : ""}`}
