@@ -7,6 +7,13 @@
   NPM_VERSION = "10"
   NEXT_TELEMETRY_DISABLED = "1"
 
+# 채널톡 홈으로 단축 URL 포워딩 (force=true로 정적 파일보다 우선)
+[[redirects]]
+  from = "/29"
+  to = "https://oysterable.channel.io/home"
+  status = 301
+  force = true
+
 # SPA-style fallback for client routes (정적 export — index.html 폴백)
 [[redirects]]
   from = "/*"
