@@ -7,10 +7,10 @@
   NPM_VERSION = "10"
   NEXT_TELEMETRY_DISABLED = "1"
 
-# 채널톡 홈으로 단축 URL 포워딩 (force=true로 정적 파일보다 우선)
+# 2026-05-21 — CS 채널 통합 (5/19 D-day). 채널톡 → cs.lalaloop.app으로 변경
 [[redirects]]
   from = "/29"
-  to = "https://oysterable.channel.io/home"
+  to = "https://cs.lalaloop.app/"
   status = 301
   force = true
 
